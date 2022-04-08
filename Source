@@ -14,26 +14,25 @@ local UICorner_3 = Instance.new("UICorner")
 local EnableThemeMngr = Instance.new("TextButton")
 local nodelay = Instance.new("TextButton")
 local buletscolour = Instance.new("TextButton")
+local Retro = Instance.new("TextButton")
+local UIGradient = Instance.new("UIGradient")
+local christmag = Instance.new("TextButton")
+local UIGradient_2 = Instance.new("UIGradient")
+local RB = Instance.new("TextButton")
+local UIGradient_3 = Instance.new("UIGradient")
+local Purple = Instance.new("TextButton")
 local ResetKey = Instance.new("TextButton")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local closedrag = Instance.new("TextButton")
 local DefaultTheme = Instance.new("TextButton")
 local ForestTheme = Instance.new("TextButton")
 local KyotoTheme = Instance.new("TextButton")
-local BCC = Instance.new("ScrollingFrame")
-local closedrag_2 = Instance.new("TextButton")
-local RB = Instance.new("TextButton")
-local UIGradient = Instance.new("UIGradient")
-local Retro = Instance.new("TextButton")
-local UIGradient_2 = Instance.new("UIGradient")
-local Purple = Instance.new("TextButton")
-local christmag = Instance.new("TextButton")
-local UIGradient_3 = Instance.new("UIGradient")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 MainFramePls.Name = "MainFramePls"
 MainFramePls.Parent = ScreenGui
@@ -113,6 +112,71 @@ buletscolour.TextScaled = true
 buletscolour.TextSize = 14.000
 buletscolour.TextWrapped = true
 
+Retro.Name = "Retro"
+Retro.Parent = buletscolour
+Retro.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Retro.BackgroundTransparency = 1.000
+Retro.Position = UDim2.new(-0.00439587561, 0, 2.41504049, 0)
+Retro.Size = UDim2.new(0, 176, 0, 37)
+Retro.Visible = false
+Retro.Font = Enum.Font.FredokaOne
+Retro.Text = "Retro"
+Retro.TextColor3 = Color3.fromRGB(186, 186, 186)
+Retro.TextScaled = true
+Retro.TextSize = 14.000
+Retro.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(35, 141, 255)), ColorSequenceKeypoint.new(0.36, Color3.fromRGB(45, 130, 221)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(177, 41, 230)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(166, 88, 255))}
+UIGradient.Parent = Retro
+
+christmag.Name = "christmag"
+christmag.Parent = buletscolour
+christmag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+christmag.BackgroundTransparency = 1.000
+christmag.Position = UDim2.new(0.0972031355, 0, 3.15034103, 0)
+christmag.Size = UDim2.new(0, 147, 0, 33)
+christmag.Visible = false
+christmag.Font = Enum.Font.FredokaOne
+christmag.Text = "Christmas"
+christmag.TextColor3 = Color3.fromRGB(186, 186, 186)
+christmag.TextScaled = true
+christmag.TextSize = 14.000
+christmag.TextWrapped = true
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.36, Color3.fromRGB(221, 0, 0)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(0, 231, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 255, 0))}
+UIGradient_2.Parent = christmag
+
+RB.Name = "RB"
+RB.Parent = buletscolour
+RB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RB.BackgroundTransparency = 1.000
+RB.Position = UDim2.new(-0.00729250908, 0, 1.7347126, 0)
+RB.Size = UDim2.new(0, 177, 0, 35)
+RB.Visible = false
+RB.Font = Enum.Font.FredokaOne
+RB.Text = "Red and Blue"
+RB.TextColor3 = Color3.fromRGB(255, 255, 255)
+RB.TextScaled = true
+RB.TextSize = 14.000
+RB.TextWrapped = true
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.02, Color3.fromRGB(237, 1, 21)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(143, 0, 2)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(203, 0, 3)), ColorSequenceKeypoint.new(0.45, Color3.fromRGB(199, 0, 3)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(0, 0, 159)), ColorSequenceKeypoint.new(0.57, Color3.fromRGB(47, 0, 201)), ColorSequenceKeypoint.new(0.62, Color3.fromRGB(0, 7, 159)), ColorSequenceKeypoint.new(0.69, Color3.fromRGB(0, 8, 176)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 17, 255))}
+UIGradient_3.Parent = RB
+
+Purple.Name = "Purple"
+Purple.Parent = buletscolour
+Purple.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Purple.BackgroundTransparency = 1.000
+Purple.Position = UDim2.new(-0.00335425138, 0, 0.996133327, 0)
+Purple.Size = UDim2.new(0, 176, 0, 37)
+Purple.Visible = false
+Purple.Font = Enum.Font.FredokaOne
+Purple.Text = "Purple"
+Purple.TextColor3 = Color3.fromRGB(170, 85, 255)
+Purple.TextScaled = true
+Purple.TextSize = 14.000
+Purple.TextWrapped = true
+
 ResetKey.Name = "ResetKey"
 ResetKey.Parent = MainFramePls
 ResetKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -125,7 +189,7 @@ ResetKey.TextColor3 = Color3.fromRGB(255, 255, 255)
 ResetKey.TextSize = 38.000
 ResetKey.TextWrapped = true
 
-ScrollingFrame.Parent = ScreenGui
+ScrollingFrame.Parent = MainFramePls
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 ScrollingFrame.Position = UDim2.new(0.623318911, 0, 0.687872767, 0)
@@ -182,89 +246,9 @@ KyotoTheme.TextScaled = true
 KyotoTheme.TextSize = 14.000
 KyotoTheme.TextWrapped = true
 
-BCC.Name = "BCC"
-BCC.Parent = ScreenGui
-BCC.Active = true
-BCC.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-BCC.Position = UDim2.new(0.778895259, 0, -1.49011612e-08, 0)
-BCC.Size = UDim2.new(0, 497, 0, 290)
-BCC.Visible = false
-
-closedrag_2.Name = "close/drag"
-closedrag_2.Parent = BCC
-closedrag_2.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
-closedrag_2.BorderSizePixel = 0
-closedrag_2.Position = UDim2.new(-0.00804828946, 0, 0, 0)
-closedrag_2.Size = UDim2.new(0, 497, 0, 32)
-closedrag_2.Font = Enum.Font.SourceSans
-closedrag_2.Text = ""
-closedrag_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-closedrag_2.TextSize = 14.000
-
-RB.Name = "RB"
-RB.Parent = BCC
-RB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RB.BackgroundTransparency = 1.000
-RB.Position = UDim2.new(0.00603621732, 0, 0.0308219641, 0)
-RB.Size = UDim2.new(0, 491, 0, 50)
-RB.Font = Enum.Font.FredokaOne
-RB.Text = "Red and Blue"
-RB.TextColor3 = Color3.fromRGB(255, 255, 255)
-RB.TextScaled = true
-RB.TextSize = 14.000
-RB.TextWrapped = true
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.02, Color3.fromRGB(237, 1, 21)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(143, 0, 2)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(203, 0, 3)), ColorSequenceKeypoint.new(0.45, Color3.fromRGB(199, 0, 3)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(0, 0, 159)), ColorSequenceKeypoint.new(0.57, Color3.fromRGB(47, 0, 201)), ColorSequenceKeypoint.new(0.62, Color3.fromRGB(0, 7, 159)), ColorSequenceKeypoint.new(0.69, Color3.fromRGB(0, 8, 176)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 17, 255))}
-UIGradient.Parent = RB
-
-Retro.Name = "Retro"
-Retro.Parent = BCC
-Retro.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Retro.BackgroundTransparency = 1.000
-Retro.Position = UDim2.new(0.297786772, 0, 0.134194821, 0)
-Retro.Size = UDim2.new(0, 200, 0, 50)
-Retro.Font = Enum.Font.FredokaOne
-Retro.Text = "Retro"
-Retro.TextColor3 = Color3.fromRGB(186, 186, 186)
-Retro.TextScaled = true
-Retro.TextSize = 14.000
-Retro.TextWrapped = true
-
-UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(35, 141, 255)), ColorSequenceKeypoint.new(0.36, Color3.fromRGB(45, 130, 221)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(177, 41, 230)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(166, 88, 255))}
-UIGradient_2.Parent = Retro
-
-Purple.Name = "Purple"
-Purple.Parent = BCC
-Purple.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Purple.BackgroundTransparency = 1.000
-Purple.Position = UDim2.new(-0.00201201113, 0, 0.0834990069, 0)
-Purple.Size = UDim2.new(0, 491, 0, 50)
-Purple.Font = Enum.Font.FredokaOne
-Purple.Text = "Purple"
-Purple.TextColor3 = Color3.fromRGB(170, 85, 255)
-Purple.TextScaled = true
-Purple.TextSize = 14.000
-Purple.TextWrapped = true
-
-christmag.Name = "christmag"
-christmag.Parent = BCC
-christmag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-christmag.BackgroundTransparency = 1.000
-christmag.Position = UDim2.new(0.297786772, 0, 0.183896601, 0)
-christmag.Size = UDim2.new(0, 200, 0, 50)
-christmag.Font = Enum.Font.FredokaOne
-christmag.Text = "Christmas"
-christmag.TextColor3 = Color3.fromRGB(186, 186, 186)
-christmag.TextScaled = true
-christmag.TextSize = 14.000
-christmag.TextWrapped = true
-
-UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.36, Color3.fromRGB(221, 0, 0)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(0, 231, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 255, 0))}
-UIGradient_3.Parent = christmag
-
 -- Scripts:
 
-local function UTXGNLJ_fake_script() -- header.LocalScript 
+local function MYRZN_fake_script() -- header.LocalScript 
 	local script = Instance.new('LocalScript', header)
 
 	local player = game.Players.LocalPlayer
@@ -276,16 +260,8 @@ local function UTXGNLJ_fake_script() -- header.LocalScript
 	end
 	
 end
-coroutine.wrap(UTXGNLJ_fake_script)()
-local function MZJUS_fake_script() -- EnableThemeMngr.LocalScript 
-	local script = Instance.new('LocalScript', EnableThemeMngr)
-
-	script.Parent.MouseButton1Click:Connect(function() -- this is to make clicking on it actually work
-		game.StarterGui.ScreenGui.ScrollingFrame.Visible = true -- makes the theme manager open (it's invisible by default :>)
-	end)
-end
-coroutine.wrap(MZJUS_fake_script)()
-local function WQJGP_fake_script() -- MainFramePls.Make GUI Draggable 
+coroutine.wrap(MYRZN_fake_script)()
+local function QRYMVS_fake_script() -- MainFramePls.Make GUI Draggable 
 	local script = Instance.new('LocalScript', MainFramePls)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -328,24 +304,168 @@ local function WQJGP_fake_script() -- MainFramePls.Make GUI Draggable
 		end
 	end)
 end
-coroutine.wrap(WQJGP_fake_script)()
-local function CFKDJ_fake_script() -- nodelay.LocalScript 
+coroutine.wrap(QRYMVS_fake_script)()
+local function YSVWP_fake_script() -- nodelay.LocalScript 
 	local script = Instance.new('LocalScript', nodelay)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/newsource/NODELAY", true))()
 	end)
 end
-coroutine.wrap(CFKDJ_fake_script)()
-local function VHSRJ_fake_script() -- buletscolour.LocalScript 
+coroutine.wrap(YSVWP_fake_script)()
+local function GTNFMC_fake_script() -- buletscolour.LocalScript 
 	local script = Instance.new('LocalScript', buletscolour)
 
-	script.Parent.MouseButton1Click:Connect(function() -- this is to make clicking on it actually work
-		game.StarterGui.ScreenGui.BCC.Visible = true
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent:FindFirstChild("Purple").Visible = true
+		script.Parent:FindFirstChild("RB").Visible = true
+		script.Parent:FindFirstChild("Retro").Visible = true
+		script.Parent:FindFirstChild("christmag").Visible = true
 	end)
+		
 end
-coroutine.wrap(VHSRJ_fake_script)()
-local function EGZZYX_fake_script() -- ResetKey.LocalScript 
+coroutine.wrap(GTNFMC_fake_script)()
+local function CRBVMVS_fake_script() -- Retro.LocalScript 
+	local script = Instance.new('LocalScript', Retro)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent:FindFirstChild("Purple").Visible = false
+		script.Parent.Parent:FindFirstChild("RB").Visible = false
+		script.Parent.Parent:FindFirstChild("Retro").Visible = false
+		script.Parent.Parent:FindFirstChild("christmag").Visible = false
+		local RunService = game:GetService("RunService")
+	
+		RunService.RenderStepped:Connect(function()
+			if game.Players.LocalPlayer.Character.Humanoid then
+				--print("humanoid exists")
+				if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+					print("bullet exists")
+					if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+						print("trail exists")
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+							print("bullet done")
+						end
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+							print("success!")
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(170, 85, 255),Color3.fromRGB(49, 166, 255))
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+						end
+					end
+				end
+			end
+		end)
+	end)
+	
+end
+coroutine.wrap(CRBVMVS_fake_script)()
+local function IRGBJAX_fake_script() -- christmag.LocalScript 
+	local script = Instance.new('LocalScript', christmag)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent:FindFirstChild("Purple").Visible = false
+		script.Parent.Parent:FindFirstChild("RB").Visible = false
+		script.Parent.Parent:FindFirstChild("Retro").Visible = false
+		script.Parent.Parent:FindFirstChild("christmag").Visible = false
+		local RunService = game:GetService("RunService")
+	
+		RunService.RenderStepped:Connect(function()
+			if game.Players.LocalPlayer.Character.Humanoid then
+				--print("humanoid exists")
+				if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+					print("bullet exists")
+					if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+						print("trail exists")
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+							print("bullet done")
+						end
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+							print("success!")
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(255, 0, 4),Color3.fromRGB(0, 255, 0))
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+						end
+					end
+				end
+			end
+		end)
+	end)
+	
+end
+coroutine.wrap(IRGBJAX_fake_script)()
+local function SDQUAH_fake_script() -- RB.LocalScript 
+	local script = Instance.new('LocalScript', RB)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent:FindFirstChild("Purple").Visible = false
+		script.Parent.Parent:FindFirstChild("RB").Visible = false
+		script.Parent.Parent:FindFirstChild("Retro").Visible = false
+		script.Parent.Parent:FindFirstChild("christmag").Visible = false
+		local RunService = game:GetService("RunService")
+	
+		RunService.RenderStepped:Connect(function()
+			if game.Players.LocalPlayer.Character.Humanoid then
+				--print("humanoid exists")
+				if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+					print("bullet exists")
+					if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+						print("trail exists")
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+							print("bullet done")
+						end
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+							print("success!")
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(255, 0, 17),Color3.fromRGB(0, 0, 255))
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+						end
+					end
+				end
+			end
+		end)
+	end)
+	
+end
+coroutine.wrap(SDQUAH_fake_script)()
+local function SSJPEZ_fake_script() -- Purple.LocalScript 
+	local script = Instance.new('LocalScript', Purple)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent:FindFirstChild("Purple").Visible = false
+		script.Parent.Parent:FindFirstChild("RB").Visible = false
+		script.Parent.Parent:FindFirstChild("Retro").Visible = false
+		script.Parent.Parent:FindFirstChild("christmag").Visible = false
+		local RunService = game:GetService("RunService")
+	
+		RunService.RenderStepped:Connect(function()
+			if game.Players.LocalPlayer.Character.Humanoid then
+				--print("humanoid exists")
+				if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+					print("bullet exists")
+					if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+						print("trail exists")
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+							print("bullet done")
+						end
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+							print("success!")
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(170, 85, 255),Color3.fromRGB(170, 85, 255))
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+						end
+					end
+				end
+			end
+		end)
+	end)
+	
+end
+coroutine.wrap(SSJPEZ_fake_script)()
+local function MMWEY_fake_script() -- ResetKey.LocalScript 
 	local script = Instance.new('LocalScript', ResetKey)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -357,8 +477,8 @@ local function EGZZYX_fake_script() -- ResetKey.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(EGZZYX_fake_script)()
-local function VQYIXZO_fake_script() -- MainFramePls.Make Gui Toggle-able with a Key 
+coroutine.wrap(MMWEY_fake_script)()
+local function YILWL_fake_script() -- MainFramePls.Make Gui Toggle-able with a Key 
 	local script = Instance.new('LocalScript', MainFramePls)
 
 	local uis = game:GetService("UserInputService")
@@ -374,16 +494,16 @@ local function VQYIXZO_fake_script() -- MainFramePls.Make Gui Toggle-able with a
 		end
 	end)
 end
-coroutine.wrap(VQYIXZO_fake_script)()
-local function PLZCF_fake_script() -- closedrag.Script 
+coroutine.wrap(YILWL_fake_script)()
+local function LHGJHX_fake_script() -- closedrag.Script 
 	local script = Instance.new('Script', closedrag)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false 
 	end)
 end
-coroutine.wrap(PLZCF_fake_script)()
-local function PDMZ_fake_script() -- DefaultTheme.Script 
+coroutine.wrap(LHGJHX_fake_script)()
+local function JVBKRJQ_fake_script() -- DefaultTheme.Script 
 	local script = Instance.new('Script', DefaultTheme)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -395,8 +515,8 @@ local function PDMZ_fake_script() -- DefaultTheme.Script
 	end)
 	
 end
-coroutine.wrap(PDMZ_fake_script)()
-local function ZMANO_fake_script() -- ForestTheme.Script 
+coroutine.wrap(JVBKRJQ_fake_script)()
+local function NJUDX_fake_script() -- ForestTheme.Script 
 	local script = Instance.new('Script', ForestTheme)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -408,8 +528,8 @@ local function ZMANO_fake_script() -- ForestTheme.Script
 	end)
 	
 end
-coroutine.wrap(ZMANO_fake_script)()
-local function ZJOFKY_fake_script() -- KyotoTheme.Script 
+coroutine.wrap(NJUDX_fake_script)()
+local function QDRDVO_fake_script() -- KyotoTheme.Script 
 	local script = Instance.new('Script', KyotoTheme)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -421,8 +541,8 @@ local function ZJOFKY_fake_script() -- KyotoTheme.Script
 	end)
 	
 end
-coroutine.wrap(ZJOFKY_fake_script)()
-local function EMKZQ_fake_script() -- ScrollingFrame.Make GUI Draggable 
+coroutine.wrap(QDRDVO_fake_script)()
+local function GXEIDC_fake_script() -- ScrollingFrame.Make GUI Draggable 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -465,156 +585,4 @@ local function EMKZQ_fake_script() -- ScrollingFrame.Make GUI Draggable
 		end
 	end)
 end
-coroutine.wrap(EMKZQ_fake_script)()
-local function LRFXCMB_fake_script() -- closedrag_2.Script 
-	local script = Instance.new('Script', closedrag_2)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false 
-	end)
-end
-coroutine.wrap(LRFXCMB_fake_script)()
-local function BWYPAYL_fake_script() -- RB.LocalScript 
-	local script = Instance.new('LocalScript', RB)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(BWYPAYL_fake_script)()
-local function PDXF_fake_script() -- Retro.LocalScript 
-	local script = Instance.new('LocalScript', Retro)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local RunService = game:GetService("RunService")
-	
-		RunService.RenderStepped:Connect(function()
-			if game.Players.LocalPlayer.Character.Humanoid then
-				--print("humanoid exists")
-				if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
-					print("bullet exists")
-					if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
-						print("trail exists")
-						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
-							print("bullet done")
-						end
-						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
-							print("success!")
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(170, 85, 255),Color3.fromRGB(49, 166, 255))
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
-						end
-					end
-				end
-			end
-		end)
-	end)
-	
-end
-coroutine.wrap(PDXF_fake_script)()
-local function RTKO_fake_script() -- Purple.LocalScript 
-	local script = Instance.new('LocalScript', Purple)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local RunService = game:GetService("RunService")
-	
-		RunService.RenderStepped:Connect(function()
-			if game.Players.LocalPlayer.Character.Humanoid then
-				--print("humanoid exists")
-				if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
-					print("bullet exists")
-					if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
-						print("trail exists")
-						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
-							print("bullet done")
-						end
-						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
-							print("success!")
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(170, 85, 255),Color3.fromRGB(170, 85, 255))
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
-						end
-					end
-				end
-			end
-		end)
-	end)
-	
-end
-coroutine.wrap(RTKO_fake_script)()
-local function IZXVAV_fake_script() -- BCC.Make GUI Draggable 
-	local script = Instance.new('LocalScript', BCC)
-
-	local UserInputService = game:GetService("UserInputService")
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	local function update(input)
-		local delta = input.Position - dragStart
-		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	end
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			update(input)
-		end
-	end)
-end
-coroutine.wrap(IZXVAV_fake_script)()
-local function ZYIL_fake_script() -- christmag.LocalScript 
-	local script = Instance.new('LocalScript', christmag)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local RunService = game:GetService("RunService")
-	
-		RunService.RenderStepped:Connect(function()
-			if game.Players.LocalPlayer.Character.Humanoid then
-				--print("humanoid exists")
-				if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
-					print("bullet exists")
-					if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
-						print("trail exists")
-						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
-							print("bullet done")
-						end
-						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
-							print("success!")
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(255, 0, 4),Color3.fromRGB(0, 255, 0))
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
-						end
-					end
-				end
-			end
-		end)
-	end)
-	
-end
-coroutine.wrap(ZYIL_fake_script)()
+coroutine.wrap(GXEIDC_fake_script)()
