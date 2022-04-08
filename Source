@@ -1,3 +1,9 @@
+game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+    if KeyPressed == "v" then
+    game.StarterGui.ScreenGui.MainFramePls.Visible = false
+end
+end)
+
 game.StarterGui:SetCore("SendNotification", {
 	Title = 'test';
 	Text = 'test';
