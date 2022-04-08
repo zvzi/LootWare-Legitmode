@@ -1,14 +1,3 @@
-game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
-    if KeyPressed == "v" then
-    game.StarterGui.ScreenGui.MainFramePls.Visible = false
-end
-end)
-
-game.StarterGui:SetCore("SendNotification", {
-	Title = 'test';
-	Text = 'test';
-	Duration = 25;
-})
 -- Gui to Lua
 -- Version: 3.2
 
@@ -273,7 +262,9 @@ christmag.TextWrapped = true
 UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.36, Color3.fromRGB(221, 0, 0)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(0, 231, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 255, 0))}
 UIGradient_3.Parent = christmag
 
-local function TYIPUEK_fake_script() -- header.LocalScript 
+-- Scripts:
+
+local function UTXGNLJ_fake_script() -- header.LocalScript 
 	local script = Instance.new('LocalScript', header)
 
 	local player = game.Players.LocalPlayer
@@ -285,16 +276,16 @@ local function TYIPUEK_fake_script() -- header.LocalScript
 	end
 	
 end
-coroutine.wrap(TYIPUEK_fake_script)()
-local function QGEK_fake_script() -- EnableThemeMngr.Script 
-	local script = Instance.new('Script', EnableThemeMngr)
+coroutine.wrap(UTXGNLJ_fake_script)()
+local function MZJUS_fake_script() -- EnableThemeMngr.LocalScript 
+	local script = Instance.new('LocalScript', EnableThemeMngr)
 
 	script.Parent.MouseButton1Click:Connect(function() -- this is to make clicking on it actually work
-		script.Parent.Parent.ScrollingFrame.Visible = true -- makes the theme manager open (it's invisible by default :>)
+		game.StarterGui.ScreenGui.ScrollingFrame.Visible = true -- makes the theme manager open (it's invisible by default :>)
 	end)
 end
-coroutine.wrap(QGEK_fake_script)()
-local function BIKPIKM_fake_script() -- MainFramePls.Make GUI Draggable 
+coroutine.wrap(MZJUS_fake_script)()
+local function WQJGP_fake_script() -- MainFramePls.Make GUI Draggable 
 	local script = Instance.new('LocalScript', MainFramePls)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -337,25 +328,25 @@ local function BIKPIKM_fake_script() -- MainFramePls.Make GUI Draggable
 		end
 	end)
 end
-coroutine.wrap(BIKPIKM_fake_script)()
-local function FQTU_fake_script() -- nodelay.Script 
-	local script = Instance.new('Script', nodelay)
+coroutine.wrap(WQJGP_fake_script)()
+local function CFKDJ_fake_script() -- nodelay.LocalScript 
+	local script = Instance.new('LocalScript', nodelay)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/newsource/NODELAY", true))()
 	end)
 end
-coroutine.wrap(FQTU_fake_script)()
-local function NEMCLJ_fake_script() -- buletscolour.Script 
-	local script = Instance.new('Script', buletscolour)
+coroutine.wrap(CFKDJ_fake_script)()
+local function VHSRJ_fake_script() -- buletscolour.LocalScript 
+	local script = Instance.new('LocalScript', buletscolour)
 
 	script.Parent.MouseButton1Click:Connect(function() -- this is to make clicking on it actually work
 		game.StarterGui.ScreenGui.BCC.Visible = true
 	end)
 end
-coroutine.wrap(NEMCLJ_fake_script)()
-local function IJOI_fake_script() -- ResetKey.Script 
-	local script = Instance.new('Script', ResetKey)
+coroutine.wrap(VHSRJ_fake_script)()
+local function EGZZYX_fake_script() -- ResetKey.LocalScript 
+	local script = Instance.new('LocalScript', ResetKey)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	
@@ -366,16 +357,33 @@ local function IJOI_fake_script() -- ResetKey.Script
 		end)
 	end)
 end
-coroutine.wrap(IJOI_fake_script)()
-local function CJQOY_fake_script() -- closedrag.Script 
+coroutine.wrap(EGZZYX_fake_script)()
+local function VQYIXZO_fake_script() -- MainFramePls.Make Gui Toggle-able with a Key 
+	local script = Instance.new('LocalScript', MainFramePls)
+
+	local uis = game:GetService("UserInputService")
+	_G.toggle = true -- Set this to false if you want your gui to start as invisible
+	
+	uis.InputBegan:connect(function(inp)
+		if inp.KeyCode == Enum.KeyCode.V and _G.toggle == false then -- Change the "Key" at the end in Enum.KeyCode.Key to your desired key
+			_G.toggle = true
+			script.Parent.Visible = true
+		elseif inp.KeyCode == Enum.KeyCode.V and _G.toggle == true then -- Change the "Key" at the end in Enum.KeyCode.Key to your desired key
+			_G.toggle = false
+			script.Parent.Visible = false
+		end
+	end)
+end
+coroutine.wrap(VQYIXZO_fake_script)()
+local function PLZCF_fake_script() -- closedrag.Script 
 	local script = Instance.new('Script', closedrag)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false 
 	end)
 end
-coroutine.wrap(CJQOY_fake_script)()
-local function PSYZ_fake_script() -- DefaultTheme.Script 
+coroutine.wrap(PLZCF_fake_script)()
+local function PDMZ_fake_script() -- DefaultTheme.Script 
 	local script = Instance.new('Script', DefaultTheme)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -387,8 +395,8 @@ local function PSYZ_fake_script() -- DefaultTheme.Script
 	end)
 	
 end
-coroutine.wrap(PSYZ_fake_script)()
-local function MMWD_fake_script() -- ForestTheme.Script 
+coroutine.wrap(PDMZ_fake_script)()
+local function ZMANO_fake_script() -- ForestTheme.Script 
 	local script = Instance.new('Script', ForestTheme)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -400,8 +408,8 @@ local function MMWD_fake_script() -- ForestTheme.Script
 	end)
 	
 end
-coroutine.wrap(MMWD_fake_script)()
-local function QGHBKRW_fake_script() -- KyotoTheme.Script 
+coroutine.wrap(ZMANO_fake_script)()
+local function ZJOFKY_fake_script() -- KyotoTheme.Script 
 	local script = Instance.new('Script', KyotoTheme)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -413,8 +421,8 @@ local function QGHBKRW_fake_script() -- KyotoTheme.Script
 	end)
 	
 end
-coroutine.wrap(QGHBKRW_fake_script)()
-local function PRLSUNG_fake_script() -- ScrollingFrame.Make GUI Draggable 
+coroutine.wrap(ZJOFKY_fake_script)()
+local function EMKZQ_fake_script() -- ScrollingFrame.Make GUI Draggable 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -457,17 +465,24 @@ local function PRLSUNG_fake_script() -- ScrollingFrame.Make GUI Draggable
 		end
 	end)
 end
-coroutine.wrap(PRLSUNG_fake_script)()
-local function DITQA_fake_script() -- closedrag_2.Script 
+coroutine.wrap(EMKZQ_fake_script)()
+local function LRFXCMB_fake_script() -- closedrag_2.Script 
 	local script = Instance.new('Script', closedrag_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false 
 	end)
 end
-coroutine.wrap(DITQA_fake_script)()
-local function NANQL_fake_script() -- RB.Script 
-	local script = Instance.new('Script', RB)
+coroutine.wrap(LRFXCMB_fake_script)()
+local function BWYPAYL_fake_script() -- RB.LocalScript 
+	local script = Instance.new('LocalScript', RB)
+
+	print("Hello world!")
+	
+end
+coroutine.wrap(BWYPAYL_fake_script)()
+local function PDXF_fake_script() -- Retro.LocalScript 
+	local script = Instance.new('LocalScript', Retro)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local RunService = game:GetService("RunService")
@@ -486,7 +501,7 @@ local function NANQL_fake_script() -- RB.Script
 							print("success!")
 							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
 							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(255, 0, 4),Color3.fromRGB(0, 0, 255))
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(170, 85, 255),Color3.fromRGB(49, 166, 255))
 							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
 						end
 					end
@@ -496,40 +511,9 @@ local function NANQL_fake_script() -- RB.Script
 	end)
 	
 end
-coroutine.wrap(NANQL_fake_script)()
-local function OGMOY_fake_script() -- Retro.Script 
-	local script = Instance.new('Script', Retro)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local RunService = game:GetService("RunService")
-	
-		RunService.RenderStepped:Connect(function()
-			if game.Players.LocalPlayer.Character.Humanoid then
-				--print("humanoid exists")
-				if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
-					print("bullet exists")
-					if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
-						print("trail exists")
-						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
-							print("bullet done")
-						end
-						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
-							print("success!")
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(143, 7, 255),Color3.fromRGB(41, 170, 255))
-							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
-						end
-					end
-				end
-			end
-		end)
-	end)
-	
-end
-coroutine.wrap(OGMOY_fake_script)()
-local function YAXWZ_fake_script() -- Purple.Script 
-	local script = Instance.new('Script', Purple)
+coroutine.wrap(PDXF_fake_script)()
+local function RTKO_fake_script() -- Purple.LocalScript 
+	local script = Instance.new('LocalScript', Purple)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local RunService = game:GetService("RunService")
@@ -558,8 +542,8 @@ local function YAXWZ_fake_script() -- Purple.Script
 	end)
 	
 end
-coroutine.wrap(YAXWZ_fake_script)()
-local function VAIEUP_fake_script() -- BCC.Make GUI Draggable 
+coroutine.wrap(RTKO_fake_script)()
+local function IZXVAV_fake_script() -- BCC.Make GUI Draggable 
 	local script = Instance.new('LocalScript', BCC)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -602,9 +586,9 @@ local function VAIEUP_fake_script() -- BCC.Make GUI Draggable
 		end
 	end)
 end
-coroutine.wrap(VAIEUP_fake_script)()
-local function NARQGGR_fake_script() -- christmag.Script 
-	local script = Instance.new('Script', christmag)
+coroutine.wrap(IZXVAV_fake_script)()
+local function ZYIL_fake_script() -- christmag.LocalScript 
+	local script = Instance.new('LocalScript', christmag)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local RunService = game:GetService("RunService")
@@ -633,4 +617,4 @@ local function NARQGGR_fake_script() -- christmag.Script
 	end)
 	
 end
-coroutine.wrap(NARQGGR_fake_script)()
+coroutine.wrap(ZYIL_fake_script)()
