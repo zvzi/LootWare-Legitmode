@@ -1,14 +1,3 @@
-
--- _             _                            
---| |           | |                           
---| | ___   ___ | |_  __      ____ _ _ __ ___ 
---| |/ _ \ / _ \| __| \ \ /\ / / _` | '__/ _ \
---| | (_) | (_) | |_   \ V  V | (_| | | |  __/
---|_|\___/ \___/ \__|   \_/\_/ \__,_|_|  \___|
-                                            
-                                            
-
-
 -- Gui to Lua
 -- Version: 3.2
 
@@ -22,7 +11,6 @@ local bunnyear1 = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local bunnyear2 = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
-local EnableThemeMngr = Instance.new("TextButton")
 local nodelay = Instance.new("TextButton")
 local buletscolour = Instance.new("TextButton")
 local Retro = Instance.new("TextButton")
@@ -33,11 +21,10 @@ local RB = Instance.new("TextButton")
 local UIGradient_3 = Instance.new("UIGradient")
 local Purple = Instance.new("TextButton")
 local ResetKey = Instance.new("TextButton")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local closedrag = Instance.new("TextButton")
-local DefaultTheme = Instance.new("TextButton")
-local ForestTheme = Instance.new("TextButton")
-local KyotoTheme = Instance.new("TextButton")
+local InfStam = Instance.new("TextButton")
+local GlockColor = Instance.new("TextButton")
+local ShottyColor = Instance.new("TextButton")
+local Reset = Instance.new("TextButton")
 
 --Properties:
 
@@ -47,8 +34,8 @@ ScreenGui.ResetOnSpawn = false
 
 MainFramePls.Name = "MainFramePls"
 MainFramePls.Parent = ScreenGui
-MainFramePls.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-MainFramePls.Position = UDim2.new(0.109778523, 0, 0.182902589, 0)
+MainFramePls.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+MainFramePls.Position = UDim2.new(0.220368981, 0, 0.163021877, 0)
 MainFramePls.Size = UDim2.new(0, 595, 0, 366)
 
 header.Name = "header"
@@ -68,7 +55,7 @@ UICorner.Parent = MainFramePls
 
 bunnyear1.Name = "bunnyear1"
 bunnyear1.Parent = MainFramePls
-bunnyear1.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+bunnyear1.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 bunnyear1.Position = UDim2.new(0.10252101, 0, -0.215847, 0)
 bunnyear1.Size = UDim2.new(0, 64, 0, 129)
 
@@ -77,31 +64,18 @@ UICorner_2.Parent = bunnyear1
 
 bunnyear2.Name = "bunnyear2"
 bunnyear2.Parent = MainFramePls
-bunnyear2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+bunnyear2.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
 bunnyear2.Position = UDim2.new(0.815126061, 0, -0.215847, 0)
 bunnyear2.Size = UDim2.new(0, 60, 0, 129)
 
 UICorner_3.CornerRadius = UDim.new(0, 60)
 UICorner_3.Parent = bunnyear2
 
-EnableThemeMngr.Name = "EnableThemeMngr"
-EnableThemeMngr.Parent = MainFramePls
-EnableThemeMngr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EnableThemeMngr.BackgroundTransparency = 1.000
-EnableThemeMngr.Position = UDim2.new(0.0295842439, 0, 0.158100575, 0)
-EnableThemeMngr.Size = UDim2.new(0, 200, 0, 50)
-EnableThemeMngr.Font = Enum.Font.FredokaOne
-EnableThemeMngr.Text = "Theme Manager"
-EnableThemeMngr.TextColor3 = Color3.fromRGB(255, 255, 255)
-EnableThemeMngr.TextScaled = true
-EnableThemeMngr.TextSize = 14.000
-EnableThemeMngr.TextWrapped = true
-
 nodelay.Name = "nodelay"
 nodelay.Parent = MainFramePls
 nodelay.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 nodelay.BackgroundTransparency = 1.000
-nodelay.Position = UDim2.new(0.424542248, 0, 0.15810056, 0)
+nodelay.Position = UDim2.new(0.101853162, 0, 0.136242643, 0)
 nodelay.Size = UDim2.new(0, 119, 0, 50)
 nodelay.Font = Enum.Font.FredokaOne
 nodelay.Text = "No delay"
@@ -114,8 +88,8 @@ buletscolour.Name = "bulets colour"
 buletscolour.Parent = MainFramePls
 buletscolour.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 buletscolour.BackgroundTransparency = 1.000
-buletscolour.Position = UDim2.new(0.673281729, 0, 0.15810056, 0)
-buletscolour.Size = UDim2.new(0, 144, 0, 50)
+buletscolour.Position = UDim2.new(0.365718663, 0, 0.15810056, 0)
+buletscolour.Size = UDim2.new(0, 179, 0, 50)
 buletscolour.Font = Enum.Font.FredokaOne
 buletscolour.Text = "Bullet Color Selector"
 buletscolour.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -171,7 +145,7 @@ RB.TextScaled = true
 RB.TextSize = 14.000
 RB.TextWrapped = true
 
-UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.02, Color3.fromRGB(237, 1, 21)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(143, 0, 2)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(203, 0, 3)), ColorSequenceKeypoint.new(0.45, Color3.fromRGB(199, 0, 3)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(0, 0, 159)), ColorSequenceKeypoint.new(0.57, Color3.fromRGB(47, 0, 201)), ColorSequenceKeypoint.new(0.62, Color3.fromRGB(0, 7, 159)), ColorSequenceKeypoint.new(0.69, Color3.fromRGB(0, 8, 176)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 17, 255))}
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.02, Color3.fromRGB(237, 1, 21)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(143, 0, 2)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(203, 0, 3)), ColorSequenceKeypoint.new(0.45, Color3.fromRGB(199, 0, 3)), ColorSequenceKeypoint.new(0.54, Color3.fromRGB(0, 0, 159)), ColorSequenceKeypoint.new(0.57, Color3.fromRGB(4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV.new(0.69, Color3.fromRGB(0, 8, 176)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 17, 255))}
 UIGradient_3.Parent = RB
 
 Purple.Name = "Purple"
@@ -200,66 +174,59 @@ ResetKey.TextColor3 = Color3.fromRGB(255, 255, 255)
 ResetKey.TextSize = 38.000
 ResetKey.TextWrapped = true
 
-ScrollingFrame.Parent = MainFramePls
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-ScrollingFrame.Position = UDim2.new(0.623318911, 0, 0.687872767, 0)
-ScrollingFrame.Size = UDim2.new(0, 497, 0, 290)
-ScrollingFrame.Visible = false
+InfStam.Name = "Inf Stam"
+InfStam.Parent = MainFramePls
+InfStam.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfStam.BackgroundTransparency = 1.000
+InfStam.Position = UDim2.new(0.343869984, 0, 0.294712603, 0)
+InfStam.Size = UDim2.new(0, 200, 0, 50)
+InfStam.Font = Enum.Font.FredokaOne
+InfStam.Text = "Infinite stamina"
+InfStam.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfStam.TextScaled = true
+InfStam.TextSize = 38.000
+InfStam.TextWrapped = true
 
-closedrag.Name = "close/drag"
-closedrag.Parent = ScrollingFrame
-closedrag.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
-closedrag.BorderSizePixel = 0
-closedrag.Position = UDim2.new(-0.00804828946, 0, 0, 0)
-closedrag.Size = UDim2.new(0, 497, 0, 32)
-closedrag.Font = Enum.Font.SourceSans
-closedrag.Text = ""
-closedrag.TextColor3 = Color3.fromRGB(0, 0, 0)
-closedrag.TextSize = 14.000
+GlockColor.Name = "Glock Color"
+GlockColor.Parent = MainFramePls
+GlockColor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GlockColor.BackgroundTransparency = 1.000
+GlockColor.Position = UDim2.new(0.644710302, 0, 0.158100575, 0)
+GlockColor.Size = UDim2.new(0, 200, 0, 50)
+GlockColor.Font = Enum.Font.FredokaOne
+GlockColor.Text = "Glock Color"
+GlockColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+GlockColor.TextSize = 38.000
+GlockColor.TextWrapped = true
 
-DefaultTheme.Name = "DefaultTheme"
-DefaultTheme.Parent = ScrollingFrame
-DefaultTheme.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DefaultTheme.BackgroundTransparency = 1.000
-DefaultTheme.Position = UDim2.new(0.00603621732, 0, 0.0308219641, 0)
-DefaultTheme.Size = UDim2.new(0, 491, 0, 50)
-DefaultTheme.Font = Enum.Font.FredokaOne
-DefaultTheme.Text = "Default"
-DefaultTheme.TextColor3 = Color3.fromRGB(255, 255, 255)
-DefaultTheme.TextScaled = true
-DefaultTheme.TextSize = 14.000
-DefaultTheme.TextWrapped = true
+ShottyColor.Name = "Shotty Color"
+ShottyColor.Parent = MainFramePls
+ShottyColor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ShottyColor.BackgroundTransparency = 1.000
+ShottyColor.Position = UDim2.new(0.029584229, 0, 0.453182548, 0)
+ShottyColor.Size = UDim2.new(0, 200, 0, 50)
+ShottyColor.Font = Enum.Font.FredokaOne
+ShottyColor.Text = "Shotty Color"
+ShottyColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+ShottyColor.TextSize = 38.000
+ShottyColor.TextWrapped = true
 
-ForestTheme.Name = "ForestTheme"
-ForestTheme.Parent = ScrollingFrame
-ForestTheme.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ForestTheme.BackgroundTransparency = 1.000
-ForestTheme.Position = UDim2.new(0.297786772, 0, 0.134194821, 0)
-ForestTheme.Size = UDim2.new(0, 200, 0, 50)
-ForestTheme.Font = Enum.Font.FredokaOne
-ForestTheme.Text = "Forest"
-ForestTheme.TextColor3 = Color3.fromRGB(28, 186, 0)
-ForestTheme.TextScaled = true
-ForestTheme.TextSize = 14.000
-ForestTheme.TextWrapped = true
-
-KyotoTheme.Name = "KyotoTheme"
-KyotoTheme.Parent = ScrollingFrame
-KyotoTheme.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-KyotoTheme.BackgroundTransparency = 1.000
-KyotoTheme.Position = UDim2.new(-0.00201201113, 0, 0.0834990069, 0)
-KyotoTheme.Size = UDim2.new(0, 491, 0, 50)
-KyotoTheme.Font = Enum.Font.FredokaOne
-KyotoTheme.Text = "Kyoto"
-KyotoTheme.TextColor3 = Color3.fromRGB(255, 170, 255)
-KyotoTheme.TextScaled = true
-KyotoTheme.TextSize = 14.000
-KyotoTheme.TextWrapped = true
+Reset.Name = "Reset"
+Reset.Parent = MainFramePls
+Reset.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reset.BackgroundTransparency = 1.000
+Reset.Position = UDim2.new(0.36403805, 0, 0.453182548, 0)
+Reset.Size = UDim2.new(0, 200, 0, 50)
+Reset.Font = Enum.Font.FredokaOne
+Reset.Text = "Reset"
+Reset.TextColor3 = Color3.fromRGB(255, 255, 255)
+Reset.TextScaled = true
+Reset.TextSize = 38.000
+Reset.TextWrapped = true
 
 -- Scripts:
 
-local function MYRZN_fake_script() -- header.LocalScript 
+local function DFMYY_fake_script() -- header.LocalScript 
 	local script = Instance.new('LocalScript', header)
 
 	local player = game.Players.LocalPlayer
@@ -267,12 +234,12 @@ local function MYRZN_fake_script() -- header.LocalScript
 	if player:IsInGroup(13170123) or player:IsFriendsWith(98537731) then
 		script.Parent.Text = player.Name.."'s LootWare"
 	else
-		script.Parent.Text = "Welcome to LootWare, "..player.DisplayName
+		script.Parent.Text = "W "..player.DisplayName
 	end
 	
 end
-coroutine.wrap(MYRZN_fake_script)()
-local function QRYMVS_fake_script() -- MainFramePls.Make GUI Draggable 
+coroutine.wrap(DFMYY_fake_script)()
+local function VVCIW_fake_script() -- MainFramePls.Make GUI Draggable 
 	local script = Instance.new('LocalScript', MainFramePls)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -315,16 +282,16 @@ local function QRYMVS_fake_script() -- MainFramePls.Make GUI Draggable
 		end
 	end)
 end
-coroutine.wrap(QRYMVS_fake_script)()
-local function YSVWP_fake_script() -- nodelay.LocalScript 
+coroutine.wrap(VVCIW_fake_script)()
+local function QQWZYVP_fake_script() -- nodelay.LocalScript 
 	local script = Instance.new('LocalScript', nodelay)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/newsource/NODELAY", true))()
 	end)
 end
-coroutine.wrap(YSVWP_fake_script)()
-local function GTNFMC_fake_script() -- buletscolour.LocalScript 
+coroutine.wrap(QQWZYVP_fake_script)()
+local function OIMDKSK_fake_script() -- buletscolour.LocalScript 
 	local script = Instance.new('LocalScript', buletscolour)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -335,8 +302,8 @@ local function GTNFMC_fake_script() -- buletscolour.LocalScript
 	end)
 		
 end
-coroutine.wrap(GTNFMC_fake_script)()
-local function CRBVMVS_fake_script() -- Retro.LocalScript 
+coroutine.wrap(OIMDKSK_fake_script)()
+local function DUDN_fake_script() -- Retro.LocalScript 
 	local script = Instance.new('LocalScript', Retro)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -370,8 +337,8 @@ local function CRBVMVS_fake_script() -- Retro.LocalScript
 	end)
 	
 end
-coroutine.wrap(CRBVMVS_fake_script)()
-local function IRGBJAX_fake_script() -- christmag.LocalScript 
+coroutine.wrap(DUDN_fake_script)()
+local function KXJRPO_fake_script() -- christmag.LocalScript 
 	local script = Instance.new('LocalScript', christmag)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -405,8 +372,8 @@ local function IRGBJAX_fake_script() -- christmag.LocalScript
 	end)
 	
 end
-coroutine.wrap(IRGBJAX_fake_script)()
-local function SDQUAH_fake_script() -- RB.LocalScript 
+coroutine.wrap(KXJRPO_fake_script)()
+local function WWRXGEM_fake_script() -- RB.LocalScript 
 	local script = Instance.new('LocalScript', RB)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -440,8 +407,8 @@ local function SDQUAH_fake_script() -- RB.LocalScript
 	end)
 	
 end
-coroutine.wrap(SDQUAH_fake_script)()
-local function SSJPEZ_fake_script() -- Purple.LocalScript 
+coroutine.wrap(WWRXGEM_fake_script)()
+local function UGDHXT_fake_script() -- Purple.LocalScript 
 	local script = Instance.new('LocalScript', Purple)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -475,8 +442,8 @@ local function SSJPEZ_fake_script() -- Purple.LocalScript
 	end)
 	
 end
-coroutine.wrap(SSJPEZ_fake_script)()
-local function MMWEY_fake_script() -- ResetKey.LocalScript 
+coroutine.wrap(UGDHXT_fake_script)()
+local function MGRJKJ_fake_script() -- ResetKey.LocalScript 
 	local script = Instance.new('LocalScript', ResetKey)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -488,8 +455,8 @@ local function MMWEY_fake_script() -- ResetKey.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(MMWEY_fake_script)()
-local function YILWL_fake_script() -- MainFramePls.Make Gui Toggle-able with a Key 
+coroutine.wrap(MGRJKJ_fake_script)()
+local function IOWJN_fake_script() -- MainFramePls.Make Gui Toggle-able with a Key 
 	local script = Instance.new('LocalScript', MainFramePls)
 
 	local uis = game:GetService("UserInputService")
@@ -505,95 +472,93 @@ local function YILWL_fake_script() -- MainFramePls.Make Gui Toggle-able with a K
 		end
 	end)
 end
-coroutine.wrap(YILWL_fake_script)()
-local function LHGJHX_fake_script() -- closedrag.Script 
-	local script = Instance.new('Script', closedrag)
+coroutine.wrap(IOWJN_fake_script)()
+local function SVQEU_fake_script() -- InfStam.LocalScript 
+	local script = Instance.new('LocalScript', InfStam)
 
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false 
+	local LocalP = game.Players.LocalPlayer
+	
+	LocalP.Character.Stam.Changed:Connect(function()
+		LocalP.Character:WaitForChild"Stam"
+		LocalP.Character.Stam.Value = 100 
+	end)
+	LocalP.CharacterAdded:Connect(function()
+		LocalP.Character:WaitForChild"Stam"
+		LocalP.Character.Stam.Changed:Connect(function()
+			LocalP.Character.Stam.Value = 100 
+		end)
 	end)
 end
-coroutine.wrap(LHGJHX_fake_script)()
-local function JVBKRJQ_fake_script() -- DefaultTheme.Script 
-	local script = Instance.new('Script', DefaultTheme)
+coroutine.wrap(SVQEU_fake_script)()
+local function TYZDR_fake_script() -- GlockColor.LocalScript 
+	local script = Instance.new('LocalScript', GlockColor)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		game.StarterGui.ScreenGui.MainFramePls.BackgroundColor3 = Color3.fromRGB(56,56,56)
-		game.StarterGui.ScreenGui.MainFramePls.bunnyear1.BackgroundColor3 = Color3.fromRGB(56,56,56)
-		game.StarterGui.ScreenGui.MainFramePls.bunnyear2.BackgroundColor3 = Color3.fromRGB(56,56,56)
-		game.StarterGui.ScreenGui.MainFramePls.header.TextColor3 = Color3.fromRGB(255, 255, 255)
-		game.StarterGui.ScreenGui.MainFramePls.EnableThemeMngr.TextColor3 = Color3.fromRGB(255, 255, 255)
-	end)
+		mouse = game.Players.LocalPlayer:GetMouse()
+		mouse.KeyDown:Connect(function(key)
+			if key:lower() == "g" then
 	
-end
-coroutine.wrap(JVBKRJQ_fake_script)()
-local function NJUDX_fake_script() -- ForestTheme.Script 
-	local script = Instance.new('Script', ForestTheme)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		game.StarterGui.ScreenGui.MainFramePls.BackgroundColor3 = Color3.fromRGB(0, 124, 0)
-		game.StarterGui.ScreenGui.MainFramePls.bunnyear1.BackgroundColor3 = Color3.fromRGB(0, 124, 0)
-		game.StarterGui.ScreenGui.MainFramePls.bunnyear2.BackgroundColor3 = Color3.fromRGB(0, 124, 0)
-		game.StarterGui.ScreenGui.MainFramePls.header.TextColor3 = Color3.fromRGB(255, 255, 255)
-		game.StarterGui.ScreenGui.MainFramePls.EnableThemeMngr.TextColor3 = Color3.fromRGB(255, 255, 255)
-	end)
+				local glock  = game.Players.LocalPlayer.Backpack.Glock:GetChildren()
 	
-end
-coroutine.wrap(NJUDX_fake_script)()
-local function QDRDVO_fake_script() -- KyotoTheme.Script 
-	local script = Instance.new('Script', KyotoTheme)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		game.StarterGui.ScreenGui.MainFramePls.BackgroundColor3 = Color3.fromRGB(255, 162, 246)
-		game.StarterGui.ScreenGui.MainFramePls.bunnyear1.BackgroundColor3 = Color3.fromRGB(255, 162, 246)
-		game.StarterGui.ScreenGui.MainFramePls.bunnyear2.BackgroundColor3 = Color3.fromRGB(255, 162, 246)
-		game.StarterGui.ScreenGui.MainFramePls.header.TextColor3 = Color3.fromRGB(255, 255, 255)
-		game.StarterGui.ScreenGui.MainFramePls.EnableThemeMngr.TextColor3 = Color3.fromRGB(255, 255, 255)
-	end)
 	
-end
-coroutine.wrap(QDRDVO_fake_script)()
-local function GXEIDC_fake_script() -- ScrollingFrame.Make GUI Draggable 
-	local script = Instance.new('LocalScript', ScrollingFrame)
-
-	local UserInputService = game:GetService("UserInputService")
+				for i,v in pairs (glock) do
+					if v.Name == "Union" or "Heh" or "Handle" or "Barrel" or "Clip" then
+						v.UsePartColor = true
+						wait()
+						v.Material = "Neon"
+						v.Color = Color3.fromRGB(255, 0, 0)
+						v.Transparency = 0.6
 	
-	local gui = script.Parent
 	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	local function update(input)
-		local delta = input.Position - dragStart
-		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	end
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
+					end
 				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			update(input)
-		end
+			end
+		end)
 	end)
 end
-coroutine.wrap(GXEIDC_fake_script)()
+coroutine.wrap(TYZDR_fake_script)()
+local function VIZVQE_fake_script() -- ShottyColor.LocalScript 
+	local script = Instance.new('LocalScript', ShottyColor)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		mouse = game.Players.LocalPlayer:GetMouse()
+		mouse.KeyDown:Connect(function(key)
+			if key:lower() == "m" then
+	
+				local shotty = game.Players.LocalPlayer.Backpack.Shotty:GetChildren()
+	
+	
+				for i,v in pairs (shotty) do
+					if v.Name == "Union" then
+						v.UsePartColor = true
+						wait()
+						v.Material = "Neon"
+						v.Color = Color3.fromRGB(255, 0, 0)
+						v.Transparency = 0.6
+					end
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(VIZVQE_fake_script)()
+local function ABWMVJ_fake_script() -- Reset.LocalScript 
+	local script = Instance.new('LocalScript', Reset)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character 
+		local enabled = true 
+		local userinputservice = game:GetService("UserInputService") 
+		userinputservice.InputBegan:connect(function(input)
+			if input.KeyCode == Enum.KeyCode.X and enabled then 
+				character.Head:Remove() 
+				enabled = false
+				warn(player.Name.." has been reset successfully!") 
+				wait(6) 
+				enabled = true 
+			end
+		end)
+	end)
+end
+coroutine.wrap(ABWMVJ_fake_script)()
