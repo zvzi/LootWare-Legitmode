@@ -212,7 +212,7 @@ ShottyColor.TextWrapped = true
 
 -- Scripts:
 
-local function NQGWKA_fake_script() -- header.LocalScript 
+local function DLXJZU_fake_script() -- header.LocalScript 
 	local script = Instance.new('LocalScript', header)
 
 	local player = game.Players.LocalPlayer
@@ -224,8 +224,8 @@ local function NQGWKA_fake_script() -- header.LocalScript
 	end
 	
 end
-coroutine.wrap(NQGWKA_fake_script)()
-local function NTZDETP_fake_script() -- MainFramePls.Make GUI Draggable 
+coroutine.wrap(DLXJZU_fake_script)()
+local function UJUIKK_fake_script() -- MainFramePls.Make GUI Draggable 
 	local script = Instance.new('LocalScript', MainFramePls)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -268,16 +268,16 @@ local function NTZDETP_fake_script() -- MainFramePls.Make GUI Draggable
 		end
 	end)
 end
-coroutine.wrap(NTZDETP_fake_script)()
-local function BMIGSRE_fake_script() -- nodelay.LocalScript 
+coroutine.wrap(UJUIKK_fake_script)()
+local function HXKES_fake_script() -- nodelay.LocalScript 
 	local script = Instance.new('LocalScript', nodelay)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/newsource/NODELAY", true))()
 	end)
 end
-coroutine.wrap(BMIGSRE_fake_script)()
-local function QLJNX_fake_script() -- buletscolour.LocalScript 
+coroutine.wrap(HXKES_fake_script)()
+local function FSIFR_fake_script() -- buletscolour.LocalScript 
 	local script = Instance.new('LocalScript', buletscolour)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -288,8 +288,8 @@ local function QLJNX_fake_script() -- buletscolour.LocalScript
 	end)
 		
 end
-coroutine.wrap(QLJNX_fake_script)()
-local function TTYH_fake_script() -- Retro.LocalScript 
+coroutine.wrap(FSIFR_fake_script)()
+local function AZWDMP_fake_script() -- Retro.LocalScript 
 	local script = Instance.new('LocalScript', Retro)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -323,8 +323,8 @@ local function TTYH_fake_script() -- Retro.LocalScript
 	end)
 	
 end
-coroutine.wrap(TTYH_fake_script)()
-local function HXJRUHP_fake_script() -- christmag.LocalScript 
+coroutine.wrap(AZWDMP_fake_script)()
+local function SPPCQ_fake_script() -- christmag.LocalScript 
 	local script = Instance.new('LocalScript', christmag)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -358,8 +358,8 @@ local function HXJRUHP_fake_script() -- christmag.LocalScript
 	end)
 	
 end
-coroutine.wrap(HXJRUHP_fake_script)()
-local function TMBWV_fake_script() -- RB.LocalScript 
+coroutine.wrap(SPPCQ_fake_script)()
+local function GIXSEG_fake_script() -- RB.LocalScript 
 	local script = Instance.new('LocalScript', RB)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -393,8 +393,8 @@ local function TMBWV_fake_script() -- RB.LocalScript
 	end)
 	
 end
-coroutine.wrap(TMBWV_fake_script)()
-local function IROMVQF_fake_script() -- Purple.LocalScript 
+coroutine.wrap(GIXSEG_fake_script)()
+local function CWLWHOQ_fake_script() -- Purple.LocalScript 
 	local script = Instance.new('LocalScript', Purple)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -428,8 +428,8 @@ local function IROMVQF_fake_script() -- Purple.LocalScript
 	end)
 	
 end
-coroutine.wrap(IROMVQF_fake_script)()
-local function FPHQYK_fake_script() -- ResetKey.LocalScript 
+coroutine.wrap(CWLWHOQ_fake_script)()
+local function AWWF_fake_script() -- ResetKey.LocalScript 
 	local script = Instance.new('LocalScript', ResetKey)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -453,8 +453,8 @@ local function FPHQYK_fake_script() -- ResetKey.LocalScript
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/aphixeaphixeaphixeaphixeaphixeaphixe/reset/main/reset'), true)
 	end)
 end
-coroutine.wrap(FPHQYK_fake_script)()
-local function ASTPV_fake_script() -- MainFramePls.Make Gui Toggle-able with a Key 
+coroutine.wrap(AWWF_fake_script)()
+local function RAMFY_fake_script() -- MainFramePls.Make Gui Toggle-able with a Key 
 	local script = Instance.new('LocalScript', MainFramePls)
 
 	local uis = game:GetService("UserInputService")
@@ -470,25 +470,27 @@ local function ASTPV_fake_script() -- MainFramePls.Make Gui Toggle-able with a K
 		end
 	end)
 end
-coroutine.wrap(ASTPV_fake_script)()
-local function RGRGKC_fake_script() -- InfStam.LocalScript 
+coroutine.wrap(RAMFY_fake_script)()
+local function UDAOJ_fake_script() -- InfStam.LocalScript 
 	local script = Instance.new('LocalScript', InfStam)
 
-	local LocalP = game.Players.LocalPlayer
+	script.Parent.MouseButton1Click:Connect(function()
+		local LocalP = game.Players.LocalPlayer
 	
-	LocalP.Character.Stam.Changed:Connect(function()
-		LocalP.Character:WaitForChild"Stam"
-		LocalP.Character.Stam.Value = 100 
-	end)
-	LocalP.CharacterAdded:Connect(function()
-		LocalP.Character:WaitForChild"Stam"
 		LocalP.Character.Stam.Changed:Connect(function()
+			LocalP.Character:WaitForChild"Stam"
 			LocalP.Character.Stam.Value = 100 
+		end)
+		LocalP.CharacterAdded:Connect(function()
+			LocalP.Character:WaitForChild"Stam"
+			LocalP.Character.Stam.Changed:Connect(function()
+				LocalP.Character.Stam.Value = 100 
+			end)
 		end)
 	end)
 end
-coroutine.wrap(RGRGKC_fake_script)()
-local function FXIND_fake_script() -- GlockColor.LocalScript 
+coroutine.wrap(UDAOJ_fake_script)()
+local function NMLOMFR_fake_script() -- GlockColor.LocalScript 
 	local script = Instance.new('LocalScript', GlockColor)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -514,8 +516,8 @@ local function FXIND_fake_script() -- GlockColor.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(FXIND_fake_script)()
-local function GRWG_fake_script() -- ShottyColor.LocalScript 
+coroutine.wrap(NMLOMFR_fake_script)()
+local function PRVRPA_fake_script() -- ShottyColor.LocalScript 
 	local script = Instance.new('LocalScript', ShottyColor)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -539,4 +541,4 @@ local function GRWG_fake_script() -- ShottyColor.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(GRWG_fake_script)()
+coroutine.wrap(PRVRPA_fake_script)()
