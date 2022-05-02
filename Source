@@ -1,0 +1,765 @@
+-- Gui to Lua
+
+
+-- Version: 3.2
+
+
+
+-- Instances:
+
+
+
+local MainFramePls = Instance.new("Frame")
+
+
+local UICorner = Instance.new("UICorner")
+
+
+local header = Instance.new("TextLabel")
+
+
+local ScrollingFrame = Instance.new("ScrollingFrame")
+
+
+local NoDelay = Instance.new("TextButton")
+
+
+local bclr = Instance.new("TextButton")
+
+
+local UIListLayout = Instance.new("UIListLayout")
+
+
+local InfStam = Instance.new("TextButton")
+
+
+local Reset = Instance.new("TextButton")
+
+
+local header_2 = Instance.new("TextLabel")
+
+
+
+--Properties:
+
+
+
+MainFramePls.Name = "MainFramePls"
+
+
+MainFramePls.Parent = game.StarterGui.ScreenGui
+
+
+MainFramePls.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+
+
+MainFramePls.Position = UDim2.new(0.14726682, 0, 0.159045726, 0)
+
+
+MainFramePls.Size = UDim2.new(0, 219, 0, 366)
+
+
+
+UICorner.CornerRadius = UDim.new(0, 60)
+
+
+UICorner.Parent = MainFramePls
+
+
+
+header.Name = "header"
+
+
+header.Parent = MainFramePls
+
+
+header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+header.BackgroundTransparency = 1.000
+
+
+header.Position = UDim2.new(0.0642186031, 0, 0.0300546456, 0)
+
+
+header.Size = UDim2.new(0, 189, 0, 39)
+
+
+header.Font = Enum.Font.FredokaOne
+
+
+header.Text = "Lootware"
+
+
+header.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+header.TextScaled = true
+
+
+header.TextSize = 63.000
+
+
+header.TextStrokeColor3 = Color3.fromRGB(247, 207, 255)
+
+
+header.TextStrokeTransparency = 0.000
+
+
+header.TextWrapped = true
+
+
+
+ScrollingFrame.Parent = MainFramePls
+
+
+ScrollingFrame.Active = true
+
+
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+ScrollingFrame.BackgroundTransparency = 1.000
+
+
+ScrollingFrame.BorderColor3 = Color3.fromRGB(170, 170, 255)
+
+
+ScrollingFrame.LayoutOrder = 5
+
+
+ScrollingFrame.Position = UDim2.new(0, 0, 0.136612028, 0)
+
+
+ScrollingFrame.Size = UDim2.new(0, 213, 0, 259)
+
+
+
+NoDelay.Name = "NoDelay"
+
+
+NoDelay.Parent = ScrollingFrame
+
+
+NoDelay.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+NoDelay.BackgroundTransparency = 1.000
+
+
+NoDelay.Position = UDim2.new(0.0153321978, 0, 0.0150273228, 0)
+
+
+NoDelay.Size = UDim2.new(0, 200, 0, 50)
+
+
+NoDelay.Font = Enum.Font.FredokaOne
+
+
+NoDelay.Text = "No Delay"
+
+
+NoDelay.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+NoDelay.TextSize = 33.000
+
+
+NoDelay.TextStrokeColor3 = Color3.fromRGB(113, 105, 231)
+
+
+NoDelay.TextStrokeTransparency = 0.000
+
+
+NoDelay.TextWrapped = true
+
+
+
+bclr.Name = "bclr"
+
+
+bclr.Parent = ScrollingFrame
+
+
+bclr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+bclr.BackgroundTransparency = 1.000
+
+
+bclr.Position = UDim2.new(0.735945463, 0, -0.0450819694, 0)
+
+
+bclr.Size = UDim2.new(0, 200, 0, 50)
+
+
+bclr.Font = Enum.Font.FredokaOne
+
+
+bclr.Text = "bullet color"
+
+
+bclr.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+bclr.TextSize = 33.000
+
+
+bclr.TextStrokeColor3 = Color3.fromRGB(113, 105, 231)
+
+
+bclr.TextStrokeTransparency = 0.000
+
+
+bclr.TextWrapped = true
+
+
+
+UIListLayout.Parent = ScrollingFrame
+
+
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+
+UIListLayout.Padding = UDim.new(0, 5)
+
+
+
+InfStam.Name = "InfStam"
+
+
+InfStam.Parent = ScrollingFrame
+
+
+InfStam.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+InfStam.BackgroundTransparency = 1.000
+
+
+InfStam.Position = UDim2.new(0, 0, 0.424710423, 0)
+
+
+InfStam.Size = UDim2.new(0, 219, 0, 42)
+
+
+InfStam.Font = Enum.Font.FredokaOne
+
+
+InfStam.Text = "Infinite Stam"
+
+
+InfStam.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+InfStam.TextSize = 33.000
+
+
+InfStam.TextStrokeColor3 = Color3.fromRGB(113, 105, 231)
+
+
+InfStam.TextStrokeTransparency = 0.000
+
+
+InfStam.TextWrapped = true
+
+
+
+Reset.Name = "Reset"
+
+
+Reset.Parent = ScrollingFrame
+
+
+Reset.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+Reset.BackgroundTransparency = 1.000
+
+
+Reset.Position = UDim2.new(-0.617942691, 0, 0.0846994519, 0)
+
+
+Reset.Size = UDim2.new(0, 200, 0, 50)
+
+
+Reset.Font = Enum.Font.FredokaOne
+
+
+Reset.Text = "Reset"
+
+
+Reset.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+Reset.TextSize = 33.000
+
+
+Reset.TextStrokeColor3 = Color3.fromRGB(113, 105, 231)
+
+
+Reset.TextStrokeTransparency = 0.000
+
+
+Reset.TextWrapped = true
+
+
+
+header_2.Name = "header"
+
+
+header_2.Parent = MainFramePls
+
+
+header_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+
+header_2.BackgroundTransparency = 1.000
+
+
+header_2.Position = UDim2.new(0.0642186031, 0, 0.81693989, 0)
+
+
+header_2.Size = UDim2.new(0, 189, 0, 39)
+
+
+header_2.Font = Enum.Font.FredokaOne
+
+
+header_2.Text = "Press \"V\" to hide/show the GUI"
+
+
+header_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+
+header_2.TextScaled = true
+
+
+header_2.TextSize = 63.000
+
+
+header_2.TextStrokeColor3 = Color3.fromRGB(247, 207, 255)
+
+
+header_2.TextStrokeTransparency = 0.000
+
+
+header_2.TextWrapped = true
+
+
+
+-- Scripts:
+
+
+
+local function YJLGTD_fake_script() -- MainFramePls.Make GUI Draggable 
+
+
+	local script = Instance.new('LocalScript', MainFramePls)
+
+
+
+	local UserInputService = game:GetService("UserInputService")
+
+
+	
+
+
+	local gui = script.Parent
+
+
+	
+
+
+	local dragging
+
+
+	local dragInput
+
+
+	local dragStart
+
+
+	local startPos
+
+
+	
+
+
+	local function update(input)
+
+
+		local delta = input.Position - dragStart
+
+
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+
+
+	end
+
+
+	
+
+
+	gui.InputBegan:Connect(function(input)
+
+
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+
+
+			dragging = true
+
+
+			dragStart = input.Position
+
+
+			startPos = gui.Position
+
+
+	
+
+
+			input.Changed:Connect(function()
+
+
+				if input.UserInputState == Enum.UserInputState.End then
+
+
+					dragging = false
+
+
+				end
+
+
+			end)
+
+
+		end
+
+
+	end)
+
+
+	
+
+
+	gui.InputChanged:Connect(function(input)
+
+
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+
+
+			dragInput = input
+
+
+		end
+
+
+	end)
+
+
+	
+
+
+	UserInputService.InputChanged:Connect(function(input)
+
+
+		if input == dragInput and dragging then
+
+
+			update(input)
+
+
+		end
+
+
+	end)
+
+
+end
+
+
+coroutine.wrap(YJLGTD_fake_script)()
+
+
+local function EJHLKAT_fake_script() -- MainFramePls.Make Gui Toggle-able with a Key 
+
+
+	local script = Instance.new('LocalScript', MainFramePls)
+
+
+
+	local uis = game:GetService("UserInputService")
+
+
+	_G.toggle = true -- Set this to false if you want your gui to start as invisible
+
+
+	
+
+
+	uis.InputBegan:connect(function(inp)
+
+
+		if inp.KeyCode == Enum.KeyCode.V and _G.toggle == false then -- Change the "Key" at the end in Enum.KeyCode.Key to your desired key
+
+
+			_G.toggle = true
+
+
+			script.Parent.Visible = true
+
+
+		elseif inp.KeyCode == Enum.KeyCode.V and _G.toggle == true then -- Change the "Key" at the end in Enum.KeyCode.Key to your desired key
+
+
+			_G.toggle = false
+
+
+			script.Parent.Visible = false
+
+
+		end
+
+
+	end)
+
+
+end
+
+
+coroutine.wrap(EJHLKAT_fake_script)()
+
+
+local function SVDRL_fake_script() -- NoDelay.LocalScript 
+
+
+	local script = Instance.new('LocalScript', NoDelay)
+
+
+
+	script.MouseButton1Click:Connect(function()
+
+
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/newsource/NODELAY", true))()
+
+
+		if not game.PlaceId(4669040) then
+
+
+		game.StarterGui.SetCore("SetNotification", {
+
+
+			Title = "loot#0001";
+
+
+			Text = "nodelay only works in prison seed 😂"
+
+
+			Icon = "https://tr.rbxcdn.com/813e360e41ba84e3600e8ccf93edabe1/420/420/Decal/Png"
+
+
+			})
+
+
+		end
+
+
+	end)
+
+
+end
+
+
+coroutine.wrap(SVDRL_fake_script)()
+
+
+local function LBUB_fake_script() -- bclr.Script 
+
+
+	local script = Instance.new('Script', bclr)
+
+
+
+	script.MouseButton1Click:Connect(function()
+
+
+		local RunService = game:GetService("RunService")
+
+
+	
+
+
+		RunService.RenderStepped:Connect(function()
+
+
+			if game.Players.LocalPlayer.Character.Humanoid then
+
+
+				--print("humanoid exists")
+
+
+				if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+
+
+					print("bullet exists")
+
+
+					if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+
+
+						print("trail exists")
+
+
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+
+
+							print("bullet done")
+
+
+						end
+
+
+						if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+
+
+							print("success!")
+
+
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+
+
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+
+
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(143, 7, 255),Color3.fromRGB(41, 170, 255))
+
+
+							game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+
+
+							game.StarterGui.SetCore("SetNotification", {
+
+
+								Title = "loot#0001";
+
+
+								Text = "Bullet Colors Added"
+
+
+								Icon = "https://tr.rbxcdn.com/813e360e41ba84e3600e8ccf93edabe1/420/420/Decal/Png"
+
+
+							})
+
+
+						end
+
+
+					end
+
+
+				end
+
+
+			end
+
+
+		end)
+
+
+	end)
+
+
+	
+
+
+end
+
+
+coroutine.wrap(LBUB_fake_script)()
+
+
+local function PWRKAO_fake_script() -- InfStam.LocalScript 
+
+
+	local script = Instance.new('LocalScript', InfStam)
+
+
+
+	script.MouseButton1Click:Connect(function()
+
+
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/newsource/infstam", true))()
+
+
+		game.StarterGui.SetCore("SetNotification", {
+
+
+			Title = "loot#0001";
+
+
+			Text = "Infinite Stamina Enabled."
+
+
+			Icon = "https://tr.rbxcdn.com/813e360e41ba84e3600e8ccf93edabe1/420/420/Decal/Png"
+
+
+		})
+
+
+	end)
+
+
+	
+
+
+end
+
+
+coroutine.wrap(PWRKAO_fake_script)()
+
+
+local function GYGEMO_fake_script() -- Reset.LocalScript 
+
+
+	local script = Instance.new('LocalScript', Reset)
+
+
+
+	script.MouseButton1Click:Connect(function()
+
+
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/newsource/NODELAY", true))()
+
+
+		if not game.PlaceId(4669040) then
+
+
+		game.StarterGui.SetCore("SetNotification", {
+
+
+			Title = "loot#0001";
+
+
+			Text = "Reset Key Is X."
+
+
+			Icon = "https://tr.rbxcdn.com/813e360e41ba84e3600e8ccf93edabe1/420/420/Decal/Png"
+
+
+			})
+
+
+		end
+
+
+	end)
+
+
+end
+
+
+coroutine.wrap(GYGEMO_fake_script)()
+
+
