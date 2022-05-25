@@ -1,5 +1,6 @@
 # LootWare-Legitmode
 Legit Mode Script For The Streets.
+Credits to @realyungphil for the majority of the scripts (reset, skybox, chatspy)
 
 ```
 + 4/8/2022
