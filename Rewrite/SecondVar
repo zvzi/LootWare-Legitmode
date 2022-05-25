@@ -1,8 +1,12 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
+local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
+local player = game.Players.LocalPlayer
+CoreGui:SetCore("SendNotification", {
+    -- Customizable
+    Title = "Notification for "..player.Name,
+    Text = "Thanks for using lootware! Credits to Aphixe for the scripts he made here.",
+    Duration = 10, -- Set the duration to how much you want this to stay
+    -- More code in part 2
+})
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
