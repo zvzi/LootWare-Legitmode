@@ -9,4 +9,4 @@ Credits to @realyungphil for the majority of the scripts (reset, skybox, chatspy
 ```
 + Loadstring:
 ```
-`loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Source", true))()`
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Rewrite/SecondVar", true))()`
