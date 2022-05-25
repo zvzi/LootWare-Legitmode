@@ -4,7 +4,7 @@ local Mouse = LocalP:GetMouse()
 prev = LocalP.Character:WaitForChild('HumanoidRootPart').CFrame
 
 Mouse.KeyDown:Connect(function(key)
-    if key == "r" then
+    if key == "x" then
         prev = LocalP.Character:WaitForChild('HumanoidRootPart').CFrame
         LocalP.Character.Parent = workspace.Terrain
         LocalP.Character.Head:Destroy()
