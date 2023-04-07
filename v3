@@ -1,0 +1,132 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local dontdeleteindexpls = Instance.new("ScreenGui")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextLabel = Instance.new("TextLabel")
+local reset = Instance.new("TextButton")
+local infinitestam = Instance.new("TextButton")
+local skybox = Instance.new("TextButton")
+local chatspy = Instance.new("TextButton")
+
+--Properties:
+
+dontdeleteindexpls.Name = "dont delete in dex pls"
+dontdeleteindexpls.Parent = game.CoreGui
+dontdeleteindexpls.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ScrollingFrame.Parent = dontdeleteindexpls
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.Position = UDim2.new(0.33646813, 0, 0.319230765, 0)
+ScrollingFrame.Size = UDim2.new(0, 313, 0, 281)
+
+TextLabel.Parent = ScrollingFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+TextLabel.Size = UDim2.new(0, 313, 0, 31)
+TextLabel.Font = Enum.Font.Highway
+TextLabel.Text = "lootware v2 - chemnas/lootsu"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 25.000
+TextLabel.TextWrapped = true
+
+reset.Name = "reset"
+reset.Parent = ScrollingFrame
+reset.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+reset.BackgroundTransparency = 1.000
+reset.Position = UDim2.new(0.178913742, 0, 0.0384615399, 0)
+reset.Size = UDim2.new(0, 200, 0, 50)
+reset.Font = Enum.Font.RobotoMono
+reset.Text = "reset (x)"
+reset.TextColor3 = Color3.fromRGB(255, 255, 255)
+reset.TextScaled = true
+reset.TextSize = 14.000
+reset.TextWrapped = true
+
+infinitestam.Name = "infinite stam"
+infinitestam.Parent = ScrollingFrame
+infinitestam.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infinitestam.BackgroundTransparency = 1.000
+infinitestam.Position = UDim2.new(0.178913742, 0, 0.0743589774, 0)
+infinitestam.Size = UDim2.new(0, 200, 0, 50)
+infinitestam.Font = Enum.Font.RobotoMono
+infinitestam.Text = "inf stam"
+infinitestam.TextColor3 = Color3.fromRGB(255, 255, 255)
+infinitestam.TextScaled = true
+infinitestam.TextSize = 14.000
+infinitestam.TextWrapped = true
+
+skybox.Name = "skybox"
+skybox.Parent = ScrollingFrame
+skybox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+skybox.BackgroundTransparency = 1.000
+skybox.Position = UDim2.new(0.178913742, 0, 0.106410265, 0)
+skybox.Size = UDim2.new(0, 200, 0, 50)
+skybox.Font = Enum.Font.RobotoMono
+skybox.Text = "skybox"
+skybox.TextColor3 = Color3.fromRGB(255, 255, 255)
+skybox.TextScaled = true
+skybox.TextSize = 14.000
+skybox.TextWrapped = true
+
+chatspy.Name = "chatspy"
+chatspy.Parent = ScrollingFrame
+chatspy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+chatspy.BackgroundTransparency = 1.000
+chatspy.Position = UDim2.new(0.178913742, 0, 0.142948717, 0)
+chatspy.Size = UDim2.new(0, 200, 0, 50)
+chatspy.Font = Enum.Font.RobotoMono
+chatspy.Text = "chatspy"
+chatspy.TextColor3 = Color3.fromRGB(255, 255, 255)
+chatspy.TextScaled = true
+chatspy.TextSize = 14.000
+chatspy.TextWrapped = true
+
+-- Scripts:
+
+local function ZPEFW_fake_script() -- reset.LocalScript 
+	local script = Instance.new('LocalScript', reset)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Rewrite/ResetKey.txt"))()
+	end)
+end
+coroutine.wrap(ZPEFW_fake_script)()
+local function SFFLOCW_fake_script() -- infinitestam.LocalScript 
+	local script = Instance.new('LocalScript', infinitestam)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Rewrite/InfStam"))()
+	end)
+end
+coroutine.wrap(SFFLOCW_fake_script)()
+local function XSYTNFT_fake_script() -- skybox.LocalScript 
+	local script = Instance.new('LocalScript', skybox)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Rewrite/Skybox.txt"))()
+	end)
+end
+coroutine.wrap(XSYTNFT_fake_script)()
+local function QJVT_fake_script() -- chatspy.LocalScript 
+	local script = Instance.new('LocalScript', chatspy)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Rewrite/ChatSpy.txt"))()
+	end)
+end
+coroutine.wrap(QJVT_fake_script)()
+local owner = 98537731
+
+game.Players.PlayerAdded:Connect(function(player)
+	player.Chatted:Connect(function(message)
+		-- Check if the message matches the "!kick (your username)" format
+		local kickCommand = "!kick " .. player.Name
+		if player.UserId == owner and message == kickCommand then
+			-- Kick the player from the game with a custom message
+			player:Kick("you were kicked by lootsu because " .. message)
+		end
+	end)
+end)
