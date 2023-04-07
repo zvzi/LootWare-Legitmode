@@ -3,6 +3,7 @@
 
 -- Instances:
 
+local Lootsu = Instance.new("ScreenGui")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local TextLabel = Instance.new("TextLabel")
 local reset = Instance.new("TextButton")
@@ -13,7 +14,11 @@ local anti = Instance.new("TextButton")
 
 --Properties:
 
-ScrollingFrame.Parent = game.CoreGui.okkkkk
+Lootsu.Name = "Lootsu"
+Lootsu.Parent = game.CoreGui
+Lootsu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ScrollingFrame.Parent = Lootsu
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.Position = UDim2.new(0.0658307076, 0, 0.214102566, 0)
@@ -95,39 +100,39 @@ anti.TextWrapped = true
 
 -- Scripts:
 
-local function EQSAMV_fake_script() -- reset.LocalScript 
+local function ORIOF_fake_script() -- reset.LocalScript 
 	local script = Instance.new('LocalScript', reset)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Rewrite/ResetKey.txt"))()
 	end)
 end
-coroutine.wrap(EQSAMV_fake_script)()
-local function LAXWYL_fake_script() -- infinitestam.LocalScript 
+coroutine.wrap(ORIOF_fake_script)()
+local function QGUF_fake_script() -- infinitestam.LocalScript 
 	local script = Instance.new('LocalScript', infinitestam)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Rewrite/InfStam"))()
 	end)
 end
-coroutine.wrap(LAXWYL_fake_script)()
-local function YQTCMSM_fake_script() -- skybox.LocalScript 
+coroutine.wrap(QGUF_fake_script)()
+local function PWMJTOA_fake_script() -- skybox.LocalScript 
 	local script = Instance.new('LocalScript', skybox)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Rewrite/Skybox.txt"))()
 	end)
 end
-coroutine.wrap(YQTCMSM_fake_script)()
-local function SCOWD_fake_script() -- chatspy.LocalScript 
+coroutine.wrap(PWMJTOA_fake_script)()
+local function HRYLKF_fake_script() -- chatspy.LocalScript 
 	local script = Instance.new('LocalScript', chatspy)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/LootWare-Legitmode/main/Rewrite/ChatSpy.txt"))()
 	end)
 end
-coroutine.wrap(SCOWD_fake_script)()
-local function ATVDOH_fake_script() -- anti.LocalScript 
+coroutine.wrap(HRYLKF_fake_script)()
+local function WPKENH_fake_script() -- anti.LocalScript 
 	local script = Instance.new('LocalScript', anti)
 
 	local par = game.Players.LocalPlayer.UserID
@@ -140,8 +145,8 @@ local function ATVDOH_fake_script() -- anti.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ATVDOH_fake_script)()
-local function LPDJ_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(WPKENH_fake_script)()
+local function GRLCZD_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	
@@ -163,15 +168,17 @@ local function LPDJ_fake_script() -- ScrollingFrame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LPDJ_fake_script)()
-local function MZXG_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(GRLCZD_fake_script)()
+local function QVEC_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	local players = game:GetService('Players')
 	
-	if game.GameId not == 9897863912 then
+	if game.GameId not = 9897863912 then
 		players.LocalPlayer:Kick("wrong game blud")
 	end
+	
+	local CoreGui = game:GetService("CoreGui")
 	
 	CoreGui:SetCore("SendNotification", {
 		-- Customizable
@@ -180,4 +187,4 @@ local function MZXG_fake_script() -- ScrollingFrame.LocalScript
 		Duration = 10, 
 	})
 end
-coroutine.wrap(MZXG_fake_script)()
+coroutine.wrap(QVEC_fake_script)()
