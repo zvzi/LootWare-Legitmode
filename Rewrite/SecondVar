@@ -16,7 +16,7 @@ local TextLabel = Instance.new("TextLabel")
 
 --Properties:
 
-Frame.Parent = game.StarterGui.ScreenGui
+Frame.Parent = game.CoreGui.ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(152, 197, 255)
 Frame.Position = UDim2.new(0.20452404, 0, 0.151093438, 0)
 Frame.Size = UDim2.new(0, 771, 0, 361)
