@@ -1,4 +1,4 @@
-local CoreGui = game:GetService("StarterGui")
+local CoreGui = game:GetService("CoreGui")
 local player = game.Players.LocalPlayer
 CoreGui:SetCore("SendNotification", {
     -- Customizable
