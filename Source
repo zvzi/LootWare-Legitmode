@@ -47,7 +47,7 @@ local header_2 = Instance.new("TextLabel")
 MainFramePls.Name = "MainFramePls"
 
 
-MainFramePls.Parent = game.StarterGui.ScreenGui
+MainFramePls.Parent = game.CoreGui.ScreenGui
 
 
 MainFramePls.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
