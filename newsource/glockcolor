@@ -1,22 +1,18 @@
-script.Parent.MouseButton1Click:Connect(function()
-	mouse = game.Players.LocalPlayer:GetMouse()
-	mouse.KeyDown:Connect(function(key)
-		if key:lower() == "g" then
+-- works in all pris games 2025
+local mouse = game.Players.LocalPlayer:GetMouse()
 
-			local glock  = game.Players.LocalPlayer.Backpack.Glock:GetChildren()
-
-
-			for i,v in pairs (glock) do
-				if v.Name == "Union" or "Heh" or "Handle" or "Barrel" or "Clip" then
-					v.UsePartColor = true
-					wait()
-					v.Material = "Neon"
-					v.Color = Color3.fromRGB(255, 0, 0)
-					v.Transparency = 0.6
-
-
-				end
-			end
-		end
-	end)
+mouse.KeyDown:Connect(function(key)
+    if key:lower() == "g" then
+        local glock = game.Players.LocalPlayer.Backpack:FindFirstChild("Glock")
+        if glock then
+            for _, v in pairs(glock:GetChildren()) do
+                if v.Name == "Union" or v.Name == "Heh" or v.Name == "Handle" or v.Name == "Barrel" or v.Name == "Clip" then
+                    v.UsePartColor = true
+                    v.Material = Enum.Material.Neon
+                    v.Color = Color3.fromRGB(255, 0, 0)
+                    v.Transparency = 0.6
+                end
+            end
+        end
+    end
 end)
